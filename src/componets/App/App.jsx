@@ -2,10 +2,10 @@
 import './App.css'
 import Card from "../Card/Card.jsx";
 function App() {
-    const div = <div>
+    const main = <main>
         <Card/>
-    </div>;
-    return div
+    </main>;
+    return main
 }
 
 export default App
