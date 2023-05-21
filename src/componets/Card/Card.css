@@ -9,10 +9,9 @@ body {
 html {
     height: 100%;
 }
-main {
+article {
     background-color:#313A49;
     border-radius: 20px;
-    box-shadow: 0px 0px 40px 4px rgba(0, 0, 0, 0.1);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -45,14 +44,15 @@ blockquote{
     align-items: center;
     width: 100%;
 }
-button {
+.button {
     width: 64px;
     height: 64px;
     border-radius: 50%;
     border: none;
     background-color:#52FFAB;
     position: relative;
-    bottom: -60px;
+    bottom: -90px;
+    color:black;
 }
 .icon {
     display: flex;
