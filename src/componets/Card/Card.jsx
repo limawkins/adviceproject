@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import "./Card.css";
 import { ReactComponent as PauseIcon } from "../../assets/pause.svg";
@@ -12,7 +13,7 @@ const Card = () => {
   }, []);
   const fetchAdvice = () => {
     setIsLoading(true);
-    fetch("https://api.adviceslip.com/advice")
+    fetch("https://api.adviceslip.com/advice",{ cache: "no-cache" })
       .then((response) => response.json())
       .then((data) =>
         setAdvice({
@@ -24,7 +25,7 @@ const Card = () => {
   };
   return (
     <article>
-      <h1>#{advice.id}</h1>
+      <h1>Advice #{advice.id}</h1>
       <blockquote>{advice.body}</blockquote>
       <div className="decoration">
         <span className="line"></span>
@@ -43,10 +44,13 @@ const Card = () => {
         )}
         onClick={fetchAdvice}
       >
+          <div className="dice-icon">
         <DiceIcon />
+              </div>
       </button>
     </article>
   );
 };
 
 export default Card;
+
