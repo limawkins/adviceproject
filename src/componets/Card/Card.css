@@ -6,9 +6,11 @@ body {
     align-items: center;
     height: 100%;
 }
+
 html {
     height: 100%;
 }
+
 article {
     background-color:#313A49;
     border-radius: 20px;
@@ -18,6 +20,7 @@ article {
     align-items: center;
     width: 546px;
 }
+
 h1{
     text-align: center;
     color: #52FFAB;
@@ -25,25 +28,28 @@ h1{
     letter-spacing: 0.18em;
     font-size: 16px;
 }
+
 blockquote{
     color: white;
     font-size: 24px;
     letter-spacing: 0.05em;
     line-height: 140%;
     text-align: center;
-
 }
+
 .line {
     height: 1px;
     background-color: white;
     opacity: 0.2;
 }
+
 .decoration {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     align-items: center;
     width: 100%;
 }
+
 .button {
     width: 64px;
     height: 64px;
@@ -53,9 +59,44 @@ blockquote{
     position: relative;
     bottom: -90px;
     color:black;
+    transition: transform 0.3s ease-in-out;
 }
+
+.button:hover {
+    transform: rotate(360deg);
+}
+
+.dice-icon{
+    transition: all 0.3s ease;
+}
+
 .icon {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+    article {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    blockquote {
+        font-size: 20px;
+    }
+
+    .button {
+        width: 48px;
+        height: 48px;
+        bottom: -70px;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
 }
